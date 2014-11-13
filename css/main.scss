@@ -5,15 +5,6 @@
 
 
 
-// New color scheme
-// Red: 8B262C
-// Blue: 2C4063
-// Gold: F3B05D
-// Taupe: C4A169
-// Green: 214241
-
-
-
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -33,9 +24,16 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
+// New color scheme
+$red-color: #8B262C;
+$blue-color: #2C4063;
+$gold-color: #F3B05D;
+$taupe-color: #C4A169;
+$green-color: #214241;
 
 
-// Using media queries with like this:
+
+// Using media queries like this:
 // @include media-query($palm) {
 //     .wrapper {
 //         padding-right: $spacing-unit / 2;
