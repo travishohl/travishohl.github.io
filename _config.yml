@@ -4,7 +4,7 @@ email: travis@travishohl.com
 description: > # this means to ignore newlines until "baseurl:"
   a pragmatic and open-minded web developer based in Austin, Texas
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.travishohl.com" # the base hostname & protocol for your site
+url: "http://travishohl.com" # the base hostname & protocol for your site
 twitter_username: thohl
 github_username:  travishohl
 
