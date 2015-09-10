@@ -5,3 +5,147 @@
 /*
   main.scss
 */
+
+/* avoids any problem with scrollbars appearing and disappearing */
+html {
+	overflow-y: scroll;
+}
+
+/* use fancy @font-face fonts in these places: */
+
+body, h1, h2, h3, h4, h5, p, small {
+
+	font-family: 'Source Sans Pro Light';
+
+	#date {
+		font-family: 'Source Sans Pro Light Italic';
+	}
+
+	a, nav, .nav-list, .panel-heading {
+		font-family: 'Source Sans Pro Regular';
+	}
+
+}
+
+@font-face {
+	/* Bootstrap Glyphicons */
+	font-family: 'Glyphicons Halflings';
+	src: url(font-path('glyphicons-halflings-regular.eot'));
+	src: url(font-path('glyphicons-halflings-regular.eot') + '?#iefix') format('embedded-opentype'), 
+	url(font-path('glyphicons-halflings-regular.woff')) format('woff'), 
+	url(font-path('glyphicons-halflings-regular.ttf')) format('truetype'), 
+	url(font-path('glyphicons-halflings-regular.svg') + '#glyphicons_halflingsregular') format('svg');
+}
+
+@font-face {
+	/* Source Sans Pro Light */
+	font-family: 'Source Sans Pro Light';
+	src: url(font-path('SourceSansPro-Light.eot')); /* IE9 Compat Modes */
+	src: url(font-path('SourceSansPro-Light.eot') + '?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url(font-path('SourceSansPro-Light.otf.woff')) format('woff'), /* Modern Browsers */
+			 url(font-path('SourceSansPro-Light.ttf.woff'))  format('truetype'), /* Safari, Android, iOS */
+			 url(font-path('SourceSansPro-Light.svg') + 'SourceSansPro-Light') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	/* Source Sans Pro Light Italic */
+	font-family: 'Source Sans Pro Light Italic';
+	src: url(font-path('SourceSansPro-LightIt.eot')); /* IE9 Compat Modes */
+	src: url(font-path('SourceSansPro-LightIt.eot') + '?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url(font-path('SourceSansPro-LightIt.otf.woff')) format('woff'), /* Modern Browsers */
+			 url(font-path('SourceSansPro-LightIt.ttf.woff'))  format('truetype'), /* Safari, Android, iOS */
+			 url(font-path('SourceSansPro-LightIt.svg') + 'SourceSansPro-LightIt') format('svg'); /* Legacy iOS */
+}
+
+
+/* Add transition to all anchors */
+a {
+  transition: all 0.1s ease-in-out;
+}
+
+
+/* Glyphicon spacing */
+a:hover .glyphicon {
+	text-decoration: none;
+}
+
+.glyphicon {
+	margin: 0px 3px;
+}
+
+/* navbar */
+
+.navbar {
+  background-color: #797979;
+  background-image: none;
+
+	.navbar-header {
+	  .navbar-brand {
+	    max-width: 158px;
+	    margin-left: 0;
+	  }
+	}
+
+  .nav li {
+    a {
+      color: #F1F1F1;
+      text-shadow: 0 1px 0 black;
+    }
+    a:hover,
+    a:focus {
+      color: #22AF60;
+    }
+  }
+}
+
+/* buttons--see home page */
+.btn-primary {
+	margin-bottom: 10px;
+	border-radius: 0px;
+}
+
+/* media--see portfolio page */
+
+.media {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+	/* limits image width--remove in production */
+  img {
+   /*  max-width: 260px; */
+  }
+}
+
+/* footer */
+
+footer {
+  padding: 60px 10px 20px 10px;
+  background-color: #797979;
+  color: #F1F1F1;
+
+	.row {
+		margin-bottom: 25px;
+	}
+
+  .nav-list li {
+    a {
+      text-shadow: 0 1px 0 black;
+      color: #F1F1F1;
+    }
+    a:hover,
+    a:focus {
+      background-color: #999999;
+    }
+  }
+
+	// nav-header shouldn't look like a link
+	#contact-travis {
+		color: #BBB;
+		text-decoration: none;
+	}
+
+  .nav-list .nav-header {
+    color: #bbbbbb;
+    text-shadow: 0 1px 0 black;
+  }
+}
