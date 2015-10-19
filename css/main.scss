@@ -10,7 +10,9 @@
 a {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: normal;
-    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
 }
 
 
@@ -24,6 +26,12 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     font-weight: 300;
+}
+
+
+.btn-primary {
+    margin-bottom: 10px;
+    border-radius: 0;
 }
 
 
@@ -44,65 +52,6 @@ body {
     url(font-path('glyphicons-halflings-regular.svg') + '#glyphicons_halflingsregular') format('svg');
 }
 
-
-.glyphicon {
-    margin: 0px 3px;
-}
-
-
-/* avoids any problem with scrollbars appearing and disappearing */
-html {
-    overflow-y: scroll;
-}
-
-
-.navbar {
-    background-color: #797979;
-    background-image: none;
-
-    .navbar-header {
-        .navbar-brand {
-            max-width: 158px;
-            margin-left: 0;
-        }
-    }
-
-    .nav li {
-        a {
-            color: #F1F1F1;
-            text-shadow: 0 1px 0 black;
-            &:hover,
-            &:focus {
-                color: #22AF60;
-            }
-        }
-    }
-}
-
-.navbar-default .navbar-toggle {
-    &:hover,
-    &:focus {
-        background-color: #696969;
-    }
-    .icon-bar {
-        background-color: #dddddd;
-    }
-}
-
-
-.btn-primary {
-    margin-bottom: 10px;
-    border-radius: 0;
-}
-
-
-.media {
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-
-/* footer */
 
 footer {
   padding: 60px 10px 20px 10px;
@@ -134,4 +83,74 @@ footer {
     color: #bbbbbb;
     text-shadow: 0 1px 0 black;
   }
+}
+
+
+.glyphicon {
+    margin: 0px 3px;
+}
+
+
+/* avoids any problem with scrollbars appearing and disappearing */
+html {
+    overflow-y: scroll;
+}
+
+
+.media {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+.navbar {
+    background-color: #797979;
+    background-image: none;
+
+    .navbar-header {
+        .navbar-brand {
+            max-width: 158px;
+            margin-left: 0;
+        }
+    }
+
+    .nav li {
+        a {
+            color: #F1F1F1;
+            text-shadow: 0 1px 0 black;
+            &:hover,
+            &:focus {
+                color: #22AF60;
+            }
+        }
+    }
+}
+
+
+.navbar-default .navbar-toggle {
+    &:hover,
+    &:focus {
+        background-color: #696969;
+    }
+    .icon-bar {
+        background-color: #dddddd;
+    }
+}
+
+
+.portfolio {
+    &__project {
+        margin-bottom: 40px;
+    }
+    &__thumbnail {
+        border: solid 2px #dddddd;
+        -webkit-transition: all 0.3s ease;
+           -moz-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+        width: 100%;
+        &:hover,
+        &:focus {
+            border-color: #797979;
+        }
+    }
 }
