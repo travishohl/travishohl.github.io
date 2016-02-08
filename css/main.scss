@@ -35,6 +35,12 @@ body {
 }
 
 
+code {
+    background-color: #dedede;
+    color: #333333;
+}
+
+
 #date {
     font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
@@ -106,6 +112,7 @@ html {
 .navbar {
     background-color: #797979;
     background-image: none;
+    margin-bottom: 0;
 
     .navbar-header {
         .navbar-brand {
@@ -135,6 +142,11 @@ html {
     .icon-bar {
         background-color: #dddddd;
     }
+}
+
+
+.panel {
+    margin-bottom: 30px;
 }
 
 
