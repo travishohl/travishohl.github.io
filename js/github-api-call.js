@@ -1,9 +1,7 @@
 // When the DOM is loaded, but before all page assets are loaded.
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    function request_listener() {
-
-        console.log(this);
+    function request_listener_success() {
 
         // Get components to "Latest Push" box.
         var avatar_element = document.getElementById("avatar");
@@ -60,10 +58,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
         action_element.appendChild(anchor);
     }
 
+    function request_listener_fail() {
+
+        console.log(request.statusText);
+        // Get components to "Latest Push" box.
+        var avatar_element = document.getElementById("avatar");
+        var date_element = document.getElementById("date");
+        var action_element = document.getElementById("action");
+
+        // Remove the image element.
+        avatar_element.parentNode.removeChild(avatar_element);
+
+        // Remove the date element.
+        date_element.parentNode.removeChild(date_element);
+
+        // Display and error message.
+        var error_message = document.createTextNode("There was a problem fetching data from the GitHub API.");
+        action_element.appendChild(error_message);
+    }
+
     // Create a new XMLHttpRequest and send it to GitHub.
     var request = new XMLHttpRequest();
-    request.addEventListener("load", request_listener);
+    request.addEventListener("load", request_listener_success);
+    request.addEventListener("error", request_listener_fail);
     request.open("GET", "https://api.github.com/users/travishohl/events");
     request.setRequestHeader("Accept", "application/vnd.github.v3+json");
     request.send();
+
 });
