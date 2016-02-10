@@ -114,13 +114,6 @@ html {
     background-image: none;
     margin-bottom: 0;
 
-    .navbar-header {
-        .navbar-brand {
-            max-width: 158px;
-            margin-left: 0;
-        }
-    }
-
     .nav li {
         a {
             color: #F1F1F1;
@@ -130,6 +123,16 @@ html {
                 color: #22AF60;
             }
         }
+    }
+
+    .navbar-header {
+        .navbar-brand {
+            max-width: 158px;
+            margin-left: 0;
+        }
+    }
+    .navbar-right {
+        margin-right: 0;
     }
 }
 
