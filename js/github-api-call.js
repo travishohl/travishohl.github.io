@@ -1,3 +1,8 @@
+/**
+ *  github-api-call.js
+ */
+
+
 function api_request_to_github() {
 
     // Create a new XMLHttpRequest and send it to GitHub.
@@ -9,8 +14,8 @@ function api_request_to_github() {
     request.send();
 }
 
+
 function request_listener_success() {
-    console.log(this);
 
     // Get components to "Latest Push" box.
     var avatar_element = document.getElementById("avatar");
@@ -67,9 +72,18 @@ function request_listener_success() {
     action_element.appendChild(anchor);
 
     // Set a cookie containing the API response.
-    //var cookie = [name, '=', JSON.stringify(json_object), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
-    //document.cookie = cookie;
+    //var cookie = ['github_latest', '=', JSON.stringify(minimal_object), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
+    var cookie = [
+        'avatar_src', '=', response_json.actor.avatar_url, ';',
+        'event_date', '=', date_value, ';',
+        'max-age', '=', 120, ';',
+        'domain', '=', window.location.host.toString(), ';',
+        'path=/;'].join('');
+    console.log(cookie);
+    console.log(encodeURIComponent(cookie));
+    document.cookie = encodeURIComponent(cookie);
 }
+
 
 function request_listener_fail() {
 
