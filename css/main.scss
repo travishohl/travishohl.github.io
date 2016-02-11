@@ -149,7 +149,12 @@ html {
 
 
 .panel {
+    border-radius: 0;
     margin-bottom: 30px;
+
+    .panel-heading {
+        border-radius: 0;
+    }
 }
 
 
