@@ -9,20 +9,14 @@
 
 
 function get_github_data() {
-    console.log(parseInt(localStorage.getItem('github-event-latest-expires'), 10));
-    var date = Date.now();
-    console.log(date);
-    console.log(parseInt(localStorage.getItem('github-event-latest-expires'), 10) - date);
 
     // Get the cache expiration date (or undefined) and convert it to Int.
     var cache_expiration_date = parseInt(localStorage.getItem('github-event-latest-expires'), 10);
 
     // If a cached response exists and the cache hasn't expired.
     if (cache_expiration_date > Date.now()) {
-        console.log("Time to load from cache...");
         insert_data_into_dom(JSON.parse(localStorage.getItem('github-event-latest')));
     } else {
-        console.log("Time to make a new request...");
         localStorage.clear();
         api_request_to_github();
     }
