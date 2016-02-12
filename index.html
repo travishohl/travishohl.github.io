@@ -31,8 +31,8 @@ layout: default
                             // When the DOM is loaded, but before all page assets are loaded.
                             document.addEventListener("DOMContentLoaded", function(event) {
 
-                                // Make an API request to GitHub.
-                                api_request_to_github();
+                                // Make an API request to GitHub or load response from cache.
+                                get_github_data();
                             });
                         </script>
                     </div>
