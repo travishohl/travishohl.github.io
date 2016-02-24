@@ -6,20 +6,36 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }} | {{ site.description }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
 
+    <!-- jquery-2.1.4.min.js -->
     <script type="text/javascript">{% include jquery-2.1.4.min.js %}</script>
 
+    <!-- bootstrap.min.css -->
     <style type="text/css">{% include bootstrap.min.css %}</style>
+
+    <!-- bootstrap.min.js -->
     <script type="text/javascript">{% include bootstrap.min.js %}</script>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic" type="text/css">
+    <!-- webfont.js -->
+    <script type="text/javascript">{% include webfont.js %}</script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Source+Sans+Pro:400,300,300italic']
+            }
+        });
+    </script>
+
+    <!-- main.css -->
     <style type="text/css">
         {% capture include_to_scssify %}
             {% include main.scss %}
         {% endcapture %}
         {{ include_to_scssify | scssify }}
     </style>
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+    <!-- github-api-call.js -->
     <script type="text/javascript">{% include github-api-call.js %}</script>
 
     <!-- Google Analytics -->
