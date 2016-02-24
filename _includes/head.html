@@ -8,11 +8,16 @@
 
     <script type="text/javascript">{% include jquery-2.1.4.min.js %}</script>
 
-    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <style type="text/css">{% include bootstrap.min.css %}</style>
     <script type="text/javascript">{% include bootstrap.min.js %}</script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic" type="text/css">
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <style type="text/css">
+        {% capture include_to_scssify %}
+            {% include main.scss %}
+        {% endcapture %}
+        {{ include_to_scssify | scssify }}
+    </style>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <script type="text/javascript">{% include github-api-call.js %}</script>
