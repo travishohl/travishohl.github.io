@@ -6,16 +6,16 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }} | {{ site.description }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
 
-    <script src="{{ "/js/jquery-2.1.4.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+    <script type="text/javascript">{% include jquery-2.1.4.min.js %}</script>
 
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
-    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+    <script type="text/javascript">{% include bootstrap.min.js %}</script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic" type="text/css">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <script src="{{ "/js/github-api-call.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+    <script type="text/javascript">{% include github-api-call.js %}</script>
 
     <!-- Google Analytics -->
     <script>
