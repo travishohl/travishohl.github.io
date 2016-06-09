@@ -101,7 +101,6 @@ function api_request_to_github() {
  */
 function request_listener_success() {
 
-    console.log(JSON.parse(this.response));
     // Turn the JSON string into an object (parse it) and rab the first (latest)
     // push event.
     var response_json = JSON.parse(this.response);
