@@ -1,4 +1,4 @@
-/**
+/*
  *  github-api-call.js
  *
  *  Gets the latest GitHub event for user travishohl and caches it
@@ -23,7 +23,7 @@ function get_github_data() {
 }
 
 
-/**
+/*
  *  Load the latest response from cache.
  */
 function insert_data_into_dom(latest_event) {
@@ -81,7 +81,7 @@ function insert_data_into_dom(latest_event) {
 }
 
 
-/**
+/*
  *  A function that creates and sends the API request.
  */
 function api_request_to_github() {
@@ -96,13 +96,20 @@ function api_request_to_github() {
 }
 
 
-/**
+/*
  *  A function to handle the case when the API request succeeds.
  */
 function request_listener_success() {
 
-    // Grab the first (latest) event and parse as Json.
-    var response_json = JSON.parse(this.response)[0];
+    console.log(JSON.parse(this.response));
+    // Turn the JSON string into an object (parse it) and rab the first (latest)
+    // push event.
+    var response_json = JSON.parse(this.response);
+    var i = 0;
+    while(response_json[i].type != 'PushEvent') {
+        i++;
+    }
+    response_json = response_json[i];
 
     // Insert github data into the dom.
     insert_data_into_dom(response_json);
@@ -115,7 +122,7 @@ function request_listener_success() {
 }
 
 
-/**
+/*
  *  A function to handle the case when the API request fails.
  */
 function request_listener_fail() {
@@ -138,7 +145,7 @@ function request_listener_fail() {
 }
 
 
-/**
+/*
  *  Detect whether localStorage is both supported and available.
  *
  *  @link https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Testing_for_support_vs_availability
