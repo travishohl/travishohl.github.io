@@ -4,6 +4,7 @@
 
 
 a {
+
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: normal;
     -webkit-transition: all 0.3s ease;
@@ -14,11 +15,13 @@ a {
 
 /* Glyphicon spacing */
 a:hover .glyphicon {
+
     text-decoration: none;
 }
 
 
 body {
+
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -26,18 +29,21 @@ body {
 
 
 .btn-primary {
+
     margin-bottom: 10px;
     border-radius: 0;
 }
 
 
 code {
+
     background-color: #dedede;
     color: #333333;
 }
 
 
 #date {
+
     font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
     font-weight: 300;
@@ -56,117 +62,140 @@ code {
 
 
 footer {
-  padding: 60px 10px 20px 10px;
-  background-color: #797979;
-  color: #F1F1F1;
 
-    .row {
-        margin-bottom: 25px;
-    }
+    padding-bottom: 20px;
+    padding-top: 60px;
+    background-color: #555555;
+    color: #f1f1f1;
 
-  .nav-list li {
-    a {
-      text-shadow: 0 1px 0 black;
-      color: #F1F1F1;
+    .nav-list li {
+
+        a {
+            color: #f1f1f1;
+
+            &:hover,
+            &:focus {
+
+                background-color: #999999;
+            }
+        }
     }
-    a:hover,
-    a:focus {
-      background-color: #999999;
-    }
-  }
 
     // nav-header shouldn't look like a link
     #contact-travis {
+
         color: #BBB;
         text-decoration: none;
     }
 
-  .nav-list .nav-header {
-    color: #bbbbbb;
-    text-shadow: 0 1px 0 black;
-  }
+    .nav-list .nav-header {
+        color: #bbbbbb;
+        text-shadow: 0 1px 0 black;
+    }
 }
 
 
 .glyphicon {
+
     margin: 0px 3px;
 }
 
 
 /* avoids any problem with scrollbars appearing and disappearing */
 html {
+
     overflow-y: scroll;
 }
 
 
 .media {
+
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
 
 .navbar {
-    background-color: #797979;
+
+    background-color: #555555;
     background-image: none;
+    border: none;
     margin-bottom: 0;
 
     .nav li {
+
         a {
-            color: #F1F1F1;
-            text-shadow: 0 1px 0 black;
+
+            color: #f1f1f1;
+
             &:hover,
             &:focus {
+
                 color: #22AF60;
             }
         }
     }
 
     .navbar-header {
+
         .navbar-brand {
+
             max-width: 158px;
             margin-left: 0;
         }
     }
+
     .navbar-right {
+
         margin-right: 0;
     }
 }
 
 
 .navbar-default .navbar-toggle {
+
     &:hover,
     &:focus {
+
         background-color: #696969;
     }
     .icon-bar {
+
         background-color: #dddddd;
     }
 }
 
 
 .panel {
+
     border-radius: 0;
     margin-bottom: 30px;
 
     .panel-heading {
+
         border-radius: 0;
     }
 }
 
 
 .portfolio {
+
     &__project {
+
         margin-bottom: 40px;
     }
     &__thumbnail {
+
         border: solid 2px #dddddd;
         -webkit-transition: all 0.3s ease;
            -moz-transition: all 0.3s ease;
                 transition: all 0.3s ease;
         width: 100%;
+
         &:hover,
         &:focus {
-            border-color: #797979;
+
+            border-color: #555555;
         }
     }
 }
