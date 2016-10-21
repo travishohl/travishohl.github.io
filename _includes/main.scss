@@ -31,8 +31,21 @@ body {
 
 .btn-primary {
 
-    margin-bottom: 10px;
     border-radius: 0;
+    margin-bottom: 10px;
+
+    &:first-of-type {
+
+        background-color: #20aa50;
+        border-color: #20aa50;
+
+        &:focus,
+        &:hover {
+
+            background-color: #108840;
+            border-color: #108840;
+        }
+    }
 }
 
 
@@ -109,6 +122,12 @@ html {
 }
 
 
+.jumbotron {
+
+    margin-bottom: 0;
+}
+
+
 .media {
 
     margin-top: 60px;
@@ -169,12 +188,17 @@ html {
 
 .panel {
 
+    border-color: #555555;
     border-radius: 0;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
+    margin-top: 45px;
 
     .panel-heading {
 
+        background-color: #555555;
+        border-color: #555555;
         border-radius: 0;
+        color: #ffffff;
     }
 }
 
