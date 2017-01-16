@@ -2,6 +2,16 @@
   main.scss
 */
 
+@font-face {
+    /* Bootstrap Glyphicons */
+    font-family: 'Glyphicons Halflings';
+    src: url(font-path('glyphicons-halflings-regular.eot'));
+    src: url(font-path('glyphicons-halflings-regular.eot') + '?#iefix') format('embedded-opentype'),
+    url(font-path('glyphicons-halflings-regular.woff')) format('woff'),
+    url(font-path('glyphicons-halflings-regular.ttf')) format('truetype'),
+    url(font-path('glyphicons-halflings-regular.svg') + '#glyphicons_halflingsregular') format('svg');
+}
+
 
 a {
 
@@ -64,14 +74,25 @@ code {
 }
 
 
-@font-face {
-    /* Bootstrap Glyphicons */
-    font-family: 'Glyphicons Halflings';
-    src: url(font-path('glyphicons-halflings-regular.eot'));
-    src: url(font-path('glyphicons-halflings-regular.eot') + '?#iefix') format('embedded-opentype'),
-    url(font-path('glyphicons-halflings-regular.woff')) format('woff'),
-    url(font-path('glyphicons-halflings-regular.ttf')) format('truetype'),
-    url(font-path('glyphicons-halflings-regular.svg') + '#glyphicons_halflingsregular') format('svg');
+.feedback-form {
+    max-height: 90%;
+    position: fixed;
+        bottom: 0;
+        right: 0;
+    text-align: right;
+
+    .btn {
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #wufoo-z8255a81ki4ng7 {
+        background-color: #ffffff;
+        border: 1px solid #555555;
+        padding: 15px;
+    }
 }
 
 
