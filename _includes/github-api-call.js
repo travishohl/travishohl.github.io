@@ -104,6 +104,11 @@ function request_listener_success() {
     // Turn the JSON string into an object (parse it) and rab the first (latest)
     // push event.
     var response_json = JSON.parse(this.response);
+
+    if (response_json.length < 1) {
+      return display_error_message("No recent history found.");
+    }
+
     var i = 0;
     while(response_json[i].type != 'PushEvent') {
         i++;
@@ -125,22 +130,10 @@ function request_listener_success() {
  *  A function to handle the case when the API request fails.
  */
 function request_listener_fail() {
-
     console.log(request.statusText);
-    // Get components to "Latest Push" box.
-    var avatar_element = document.getElementById("avatar");
-    var date_element = document.getElementById("date");
-    var action_element = document.getElementById("action");
 
-    // Remove the image element.
-    avatar_element.parentNode.removeChild(avatar_element);
-
-    // Remove the date element.
-    date_element.parentNode.removeChild(date_element);
-
-    // Display and error message.
-    var error_message = document.createTextNode("There was a problem fetching data from the GitHub API.");
-    action_element.appendChild(error_message);
+    // Display an error message.
+    display_error_message("There was a problem fetching data from the GitHub API.");
 }
 
 
@@ -160,4 +153,21 @@ function storage_available(type) {
     catch(e) {
         return false;
     }
+}
+
+function display_error_message(error_message) {
+    // Get components to "Latest Push" box.
+    var avatar_element = document.getElementById("avatar");
+    var date_element = document.getElementById("date");
+    var action_element = document.getElementById("action");
+
+    // Remove the image element.
+    avatar_element.parentNode.removeChild(avatar_element);
+
+    // Remove the date element.
+    date_element.parentNode.removeChild(date_element);
+
+    // Display and error message.
+    var error_message_node = document.createTextNode(error_message);
+    action_element.appendChild(error_message_node);
 }
