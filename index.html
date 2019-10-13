@@ -4,69 +4,104 @@ title: making websites from Austin, Texas
 ---
 
 <div class="jumbotron">
-    <div class="container">
-        <h1>Travis Hohl</h1>
-        <p>a pragmatic and open-minded web developer based in Austin, Texas</p>
-        <p>
-        <a class="btn btn-primary btn-lg" role="button" href="/portfolio/">View Recent Projects</a>
-        <a class="btn btn-primary btn-lg" role="button" target="_blank" href="http://stackoverflow.com/cv/travishohl/">View Stack Overflow CV</a>
-        </p>
-    </div>
+  <div class="container">
+    <h1>Travis Hohl</h1>
+    <p>a pragmatic and open-minded web developer based in Austin, Texas</p>
+    <p>
+    <a
+      class="btn btn-primary btn-lg"
+      role="button"
+      href="/portfolio/"
+    >View Recent Projects</a>
+    <a
+      class="btn btn-primary btn-lg"
+      role="button"
+      target="_blank"
+      href="http://stackoverflow.com/cv/travishohl/"
+    >View Stack Overflow CV</a>
+    </p>
+  </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">Language Preference</div>
-                <div class="panel-body">
-                    <ol>
-                        <li>Ruby</li>
-                        <li>JavaScript</li>
-                        <li>PHP</li>
-                        <li>C++</li>
-                        <li>C Language</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">Latest Push to Github</div>
-                <div class="panel-body">
-                    <div class="github_feed media">
-                        <img id="avatar" width="74px" height="74px" class="img-responsive pull-left hidden-md" alt="GitHub Avatar">
-                        <div class="media-body">
-                            <small id="date">
-                            </small>
-                            <div id="action">
-                            </div>
-                        </div>
-                        <script>
-                            // When the DOM is loaded, but before all page assets are loaded.
-                            document.addEventListener("DOMContentLoaded", function(event) {
-
-                                // Make an API request to GitHub or load response from cache.
-                                get_github_data();
-                            });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">Favorite Tools</div>
-                <div class="panel-body">
-                    <ol>
-                        <li><a href="http://www.vim.org/" target="_blank" title="A highly configurable text editor.">Vim</a></li>
-                        <li><a href="http://git-scm.com/" target="_blank" title="A popular open source version control system.">Git</a></li>
-                        <li><a href="http://brew.sh/" target="_blank" title="A software package manager for Mac OSX.">Homebrew</a></li>
-                        <li><a href="https://www.docker.com/" target="_blank" title="Conveniently mimics production software environments locally.">Docker</a></li>
-                        <li><a href="http://stackoverflow.com/users/3367343/thohl/" target="_blank" title="A question and answer site for professional and enthusiast programmers.">Stack Overflow</a></li>
-                    </ol>
-                </div>
-            </div>
-        </div>
+<div class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">Language Preference</div>
+    <div class="panel-body">
+      <ol>
+        <li>Ruby</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>C++</li>
+        <li>C Language</li>
+      </ol>
     </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">Latest Push to Github</div>
+    <div class="panel-body">
+      <div class="github_feed media">
+        <img id="avatar" width="74px" height="74px" class="img-responsive pull-left hidden-md" alt="GitHub Avatar">
+        <div class="media-body">
+          <small id="date">
+          </small>
+          <div id="action">
+          </div>
+        </div>
+        <script>
+          // When the DOM is loaded, but before all page assets are loaded.
+          document.addEventListener("DOMContentLoaded", function(event) {
+
+            // Make an API request to GitHub or load response from cache.
+            get_github_data();
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">Favorite Tools</div>
+    <div class="panel-body">
+      <ol>
+        <li>
+          <a
+            href="http://www.vim.org/"
+            target="_blank"
+            title="A highly configurable text editor."
+          >Vim</a>
+        </li>
+        <li>
+          <a
+            href="http://git-scm.com/"
+            target="_blank"
+            title="A popular open source version control system."
+          >Git</a>
+        </li>
+        <li>
+          <a
+            href="http://brew.sh/"
+            target="_blank"
+            title="A software package manager for Mac OSX."
+          >Homebrew</a>
+        </li>
+        <li>
+          <a
+            href="https://www.docker.com/"
+            target="_blank"
+            title="Conveniently mimics production software environments locally."
+          >Docker</a>
+        </li>
+        <li>
+          <a
+            href="http://stackoverflow.com/users/3367343/thohl/"
+            target="_blank"
+            title="A question and answer site for professional and enthusiast programmers."
+          >Stack Overflow</a>
+        </li>
+      </ol>
+    </div>
+  </div>
 </div>

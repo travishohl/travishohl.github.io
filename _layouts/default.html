@@ -4,15 +4,22 @@
   {% include head.html %}
 
   <body>
+    <div class="container-fluid">
 
-    {% include header.html %}
+      <div class="row">
+        {% include header.html %}
+      </div>
 
-    {{ content }}
+      <div class="row">
+        {{ content }}
+      </div>
 
-    {% include footer.html %}
+      <div class="row">
+        {% include footer.html %}
+        {% include feedback-form.html %}
+      </div>
 
-    {% include feedback-form.html %}
-
+    </div>
   </body>
 
 </html>
