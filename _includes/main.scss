@@ -97,13 +97,10 @@ code {
     }
 }
 
-
 footer {
 
     padding-bottom: 20px;
     padding-top: 60px;
-    background-color: #555555;
-    color: #f1f1f1;
 
     .nav-list li {
 
@@ -129,6 +126,11 @@ footer {
         color: #bbbbbb;
         text-shadow: 0 1px 0 black;
     }
+}
+
+.footer-background {
+    background-color: #555555;
+    color: #f1f1f1;
 }
 
 
