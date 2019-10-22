@@ -23,6 +23,25 @@ title: making websites from Austin, Texas
   </div>
 </div>
 
+<div class="col-xs-12 col-md-8 col-md-offset-2 my-2">
+  <main>
+    <h2 class="text-center em my-1">
+      <em>Latest Post</em>
+    </h2>
+    {% for post in site.posts %}
+      <section>
+        <a href="{{ post.url }}">
+          <h3>{{ post.title }}</h3>
+        </a>
+        <small>
+          <em>{{ post.date | date_to_string: "ordinal", "US" }} by {{ post.author }}</em>
+        </small>
+        {{ post.excerpt }}
+      </section>
+    {% endfor %}
+  </main>
+</div>
+
 <div class="col-md-4">
   <div class="panel panel-default">
     <div class="panel-heading">Language Preference</div>
