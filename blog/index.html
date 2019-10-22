@@ -1,0 +1,22 @@
+---
+layout: default
+title: Blog (Under Construction)
+---
+<div class="jumbotron mb-2">
+  <h1>{{ page.title }}</h1>
+</div>
+<div class="col-xs-12 col-md-8 col-md-offset-2">
+  <main>
+    {% for post in site.posts %}
+      <section>
+        <a href="{{ post.url }}">
+          <h3>{{ post.title }}</h3>
+        </a>
+        <small>
+          <em>{{ post.author }} on {{ post.date | date_to_string: "ordinal", "US" }}</em>
+        </small>
+        {{ post.excerpt }}
+      </section>
+    {% endfor %}
+  </main>
+</div>
