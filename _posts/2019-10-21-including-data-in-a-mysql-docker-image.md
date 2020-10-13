@@ -28,7 +28,8 @@ connections more quickly than a container that needs to execute SQL files.
 ## Building the Image
 
 The following Dockerfile will use an intermediate container to build a MySQL
-image containing the data imported by the intermediate container.
+image containing the data (from the SQL file(s)) imported by the intermediate
+container.
 
 ```
 # Use an intermediate container to restore from SQL dump files
