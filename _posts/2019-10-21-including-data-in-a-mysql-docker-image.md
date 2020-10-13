@@ -48,7 +48,7 @@ RUN mkdir /temp_data_directory
 RUN echo '[mysqld]\ndatadir=/temp_data_directory/' >> ${mysql_config_file}
 
 # Prevent mysqld from starting (`exec "$@"`) after initialization
-RUN sed -i '$d' ${container_entrypoint}
+RUN sed -i '/exec "$@"/d' ${container_entrypoint}
 
 RUN ${container_entrypoint} --max-allowed-packet=1GB
 
