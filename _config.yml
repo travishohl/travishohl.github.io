@@ -1,12 +1,17 @@
 # Site settings
-title: travis hohl
+title: Travis Hohl | Technical Consultant
 email: travis@travishohl.com
-description: > # this means to ignore newlines until "baseurl:"
-    Travis is a studious programmer who gradually developed his understanding of web and computer science concepts over the course of several years. He enjoys writing clean and readable code in several languages and he spends a lot of time tinkering with new things.
+description: >
+    Technical consulting for small businesses. I help companies build better systems by finding root causes and delivering measurable outcomes—not just code.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://travishohl.com" # the base hostname & protocol for your site
-twitter_username: thohl
-github_username:  travishohl
+url: "https://travishohl.com" # the base hostname & protocol for your site
+github_username: travishohl
 
 # Build settings
 markdown: kramdown
+
+# Sass settings
+sass:
+  style: compressed
+  load_paths:
+    - _sass

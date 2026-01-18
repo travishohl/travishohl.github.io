@@ -1,0 +1,5 @@
+// Custom Pico build with "nature" theme
+@use "settings" with (
+  $theme-color: "nature"
+);
+@use "index";
