@@ -1,8 +1,8 @@
 # Site settings
-title: Travis Hohl | Technical Consultant
+title: Travis Hohl | Senior Software Engineer
 email: travis@travishohl.com
 description: >
-    Technical consulting for small businesses. I help companies build better systems by finding root causes and delivering measurable outcomes—not just code.
+    Travis Hohl is a senior fullstack engineer with 13+ years building web applications — strongest in Vue.js and PHP/Laravel, comfortable across Ruby on Rails and TypeScript/React.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://travishohl.com" # the base hostname & protocol for your site
 github_username: travishohl

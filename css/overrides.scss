@@ -16,6 +16,11 @@ html {
   // Web Culture palette
   --color-teal: #709e96;
   --color-teal-dark: #5a8a82;
+  // Darker teal reserved for filled buttons so white label text meets
+  // WCAG AA (5.38:1 / hover 7.25:1). The lighter --color-teal above stays
+  // in use for nav links, where it passes on the dark background.
+  --color-teal-button: #4a7269;
+  --color-teal-button-hover: #3d5d55;
   --color-gold: #d9ca9c;
   --color-cream: #f2ebd5;
   --color-olive: #7e816b;
@@ -34,13 +39,13 @@ html {
 // Button Variants
 // ============================================
 .button--teal {
-  background-color: var(--color-teal) !important;
-  border-color: var(--color-teal) !important;
+  background-color: var(--color-teal-button) !important;
+  border-color: var(--color-teal-button) !important;
   color: white !important;
 
   &:hover {
-    background-color: var(--color-teal-dark) !important;
-    border-color: var(--color-teal-dark) !important;
+    background-color: var(--color-teal-button-hover) !important;
+    border-color: var(--color-teal-button-hover) !important;
   }
 }
 
@@ -111,12 +116,15 @@ html {
 
 .section--alt {
   background: var(--color-cream);
-  // Force dark text on cream background (needed for dark mode)
+  // Force dark text on cream background (needed for dark mode).
+  // --pico-h1-color is overridden too because Pico points h1's --pico-color
+  // at its own --pico-h1-color, which is near-white in dark mode.
   --pico-color: var(--color-brown-dark);
+  --pico-h1-color: var(--color-brown-dark);
   --pico-muted-color: var(--color-brown);
   color: var(--color-brown-dark);
 
-  h2, h3, p, li {
+  h1, h2, h3, p, li {
     color: var(--color-brown-dark);
   }
 }
@@ -270,13 +278,13 @@ html {
   flex-wrap: wrap;
 
   [role="button"] {
-    background-color: var(--color-teal) !important;
-    border-color: var(--color-teal) !important;
+    background-color: var(--color-teal-button) !important;
+    border-color: var(--color-teal-button) !important;
     color: white !important;
 
     &:hover {
-      background-color: var(--color-teal-dark) !important;
-      border-color: var(--color-teal-dark) !important;
+      background-color: var(--color-teal-button-hover) !important;
+      border-color: var(--color-teal-button-hover) !important;
     }
   }
 

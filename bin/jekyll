@@ -1,10 +1,29 @@
 #!/bin/bash
+set -euo pipefail
 
-export JEKYLL_VERSION=3.8
+# Runs Jekyll inside a modern, arm64-native Ruby container.
+#
+# The old jekyll/jekyll:3.8 image shipped EOL Ruby 2.6 and was amd64-only,
+# so it ran under emulation on Apple Silicon and could no longer install this
+# site's gems (public_suffix, listen, etc. now require Ruby >= 3.0).
+#
+# Gems are cached in ./vendor/bundle (gitignored) so installs are only slow once.
 
-docker run -it \
-  --rm \
+RUBY_IMAGE="ruby:3.3"
+
+# Default to `serve` (bound to 0.0.0.0 so it's reachable from the host, with
+# polling since macOS filesystem events don't cross the Docker bind mount).
+if [ "$#" -eq 0 ] || [ "$1" = "serve" ]; then
+  shift || true
+  JEKYLL_ARGS="serve --host 0.0.0.0 --force_polling $*"
+else
+  JEKYLL_ARGS="$*"
+fi
+
+docker run --rm -it \
   --volume="$PWD:/srv/jekyll" \
-  -p 4000:4000 \
-  jekyll/jekyll:$JEKYLL_VERSION \
-  jekyll $*
+  --volume="$PWD/vendor/bundle:/usr/local/bundle" \
+  --workdir=/srv/jekyll \
+  --publish 4000:4000 \
+  "$RUBY_IMAGE" \
+  bash -lc "bundle install && bundle exec jekyll $JEKYLL_ARGS"
